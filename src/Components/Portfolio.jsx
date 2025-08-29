@@ -19,7 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/laptop-day.jpeg";
+import image from "../images/laptop-day.jpg";
 
 const imageAltText = "Laptop on table in daylight";
 
@@ -53,7 +53,7 @@ const projectList = [
     description:
       "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
     url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
-  */},
+  },*/
 ];
 
 const Portfolio = () => {
