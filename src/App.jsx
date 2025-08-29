@@ -35,8 +35,8 @@ const siteProps = {
   youTube: "",
 };
 
-const primaryColor = "#4E567E";
-const secondaryColor = "#D2F1E4";
+const primaryColor = "#ffffffff";
+const secondaryColor = "#333333ff";
 
 const App = () => {
   const sitePropsRef = useRef(null);
@@ -59,7 +59,7 @@ const App = () => {
         style={{
           padding: "2rem 0",
           background: secondaryColor,
-          color: "#222",
+          color: "#ffffffff",
           border: "2px solid red", // Debug: add border to check visibility
           zIndex: 1, // Ensure it's above backgrounds
         }}
