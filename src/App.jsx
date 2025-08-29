@@ -59,7 +59,9 @@ const App = () => {
         style={{
           padding: "2rem 0",
           background: secondaryColor,
-          color: "#222", // Ensures text is visible on light background
+          color: "#222",
+          border: "2px solid red", // Debug: add border to check visibility
+          zIndex: 1, // Ensure it's above backgrounds
         }}
       >
         <h2>Contact & Socials</h2>
@@ -67,7 +69,6 @@ const App = () => {
           <li>Name: {siteProps.name}</li>
           <li>Title: {siteProps.title}</li>
           {siteProps.gitHub && <li>GitHub: {siteProps.gitHub}</li>}
-          {/* Add other socials as needed */}
         </ul>
       </section>
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
