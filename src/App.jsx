@@ -54,7 +54,14 @@ const App = () => {
       <About />
       <Portfolio />
       {/* Add a section for siteProps */}
-      <section ref={sitePropsRef} style={{ padding: "2rem 0", background: secondaryColor }}>
+      <section
+        ref={sitePropsRef}
+        style={{
+          padding: "2rem 0",
+          background: secondaryColor,
+          color: "#222", // Ensures text is visible on light background
+        }}
+      >
         <h2>Contact & Socials</h2>
         <ul>
           <li>Name: {siteProps.name}</li>
