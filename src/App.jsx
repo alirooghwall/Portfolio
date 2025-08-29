@@ -4,7 +4,7 @@
  * To contain application wide settings, routes, state, etc.
  */
 
-import React from "react";
+import React, { useRef } from "react";
 
 import About from "./Components/About";
 import Footer from "./Components/Footer";
@@ -39,12 +39,30 @@ const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 
 const App = () => {
+  const sitePropsRef = useRef(null);
+
+  const handleScrollToSiteProps = () => {
+    if (sitePropsRef.current) {
+      sitePropsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div id="main">
-      <Header />
+      <Header onScrollToSiteProps={handleScrollToSiteProps} />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
       <Portfolio />
+      {/* Add a section for siteProps */}
+      <section ref={sitePropsRef} style={{ padding: "2rem 0", background: secondaryColor }}>
+        <h2>Contact & Socials</h2>
+        <ul>
+          <li>Name: {siteProps.name}</li>
+          <li>Title: {siteProps.title}</li>
+          {siteProps.gitHub && <li>GitHub: {siteProps.gitHub}</li>}
+          {/* Add other socials as needed */}
+        </ul>
+      </section>
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>
   );

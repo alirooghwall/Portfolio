@@ -6,7 +6,7 @@
  */
 import React from "react";
 
-const Header = () => {
+const Header = ({ onScrollToSiteProps }) => {
   return (
     <div
       style={{
@@ -25,6 +25,7 @@ const Header = () => {
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#footer">Contact</a>
+      <button onClick={onScrollToSiteProps}>Contact & Socials</button>
     </div>
   );
 };
